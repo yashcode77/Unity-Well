@@ -99,7 +99,20 @@ export default function GenricSidebar() {
                                 </Sidebar.Item>
                             </Link>
                         </>
+
                     )}
+                    <Link to='/dashboard?tab=calendly'>
+                        <Sidebar.Item
+                            active={tab === 'calendly'}
+                            icon={HiUser}
+                            // label={currentUser.isAdmin ? 'Admin' : 'User'}
+                            label='user'
+                            labelColor='dark'
+                            as='div'
+                        >
+                           Book appointment
+                        </Sidebar.Item>
+                    </Link>
                     <Sidebar.Item
                         icon={HiArrowSmRight}
                         className='cursor-pointer'

@@ -16,6 +16,7 @@ import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Search from "./pages/Search";
 import Diary from "./pages/Diary";
+import Calendly from "./components/Calendly"
 
 // import DashSidebar from "./components/DashSidebar";
 import GenricSidebar from './components/GenricSidebar'
@@ -40,7 +41,7 @@ export default function App() {
           <Route path="/create-post" element={<CreatePost />} />
           <Route path="/update-post/:postId" element={<UpdatePost />} />
         </Route>
-
+        <Route path="/calendly" element={<Calendly/>} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/post/:postSlug" element={<PostPage />} />
         <Route path="/diary" element={<Diary />} />
