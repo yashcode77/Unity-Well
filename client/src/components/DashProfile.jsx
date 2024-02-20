@@ -236,7 +236,6 @@ export default function DashProfile() {
           <h1>Enter Your Date of Birth</h1>
           <input
             type="date"
-            // value={dob}
             id="dob"
             onChange={handleChange}
             className="text-black h-8"
