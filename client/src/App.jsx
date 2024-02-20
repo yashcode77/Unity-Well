@@ -15,12 +15,15 @@ import UpdatePost from "./pages/UpdatePost";
 import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Search from "./pages/Search";
+// import DashSidebar from "./components/DashSidebar";
+import GenricSidebar from './components/GenricSidebar'
 
 export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Header />
+      <GenricSidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/" element={<Landing />} /> */}

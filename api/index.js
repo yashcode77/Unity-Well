@@ -59,36 +59,35 @@ import nodemailer from "nodemailer";
 // dotenv.config();
 
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: {
-      // TODO: replace `user` and `pass` values from <https://forwardemail.net>
-      user: process.env.USER,
-      pass: process.env.APP_PASSWORD,
-    },
-  });
+  service: 'gmail',
+  host: "smtp.gmail.com",
+  port: 465,
+  secure: true,
+  auth: {
+    // TODO: replace `user` and `pass` values from <https://forwardemail.net>
+    user: process.env.USER,
+    pass: process.env.APP_PASSWORD,
+  },
+});
 
-  const mailOptions = {
-    from: {
-        name: 'undefined bot',
-        address: process.env.USER
-    }, // sender address
-    to: "2021.yash.chhaproo@ves.ac.in", // list of receivers
-    subject: "Test Mail", // Subject line
-    text: "Alzheimer wale mera website bhoolna mat", // plain text body
-    html: "<b>helooo</b>", // html body
+const mailOptions = {
+  from: {
+    name: 'undefined bot',
+    address: process.env.USER
+  }, // sender address
+  to: "2021.yash.chhaproo@ves.ac.in", // list of receivers
+  subject: "Test Mail", // Subject line
+  text: "Alzheimer wale mera website bhoolna mat", // plain text body
+  html: "<b>helooo</b>", // html body
+}
+
+const sendMail = async (transporter, mailOptions) => {
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Sent mail");
+  } catch (error) {
+    console.log(error);
   }
+}
 
-  const sendMail = async(transporter, mailOptions) => {
-    try {
-        await transporter.sendMail(mailOptions);
-        console.log("Sent mail");
-    } catch (error) {
-        console.log(error);
-    }
-  }
-
-  // sendMail(transporter, mailOptions);
-  
+// sendMail(transporter, mailOptions);
