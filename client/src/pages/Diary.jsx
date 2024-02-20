@@ -87,10 +87,10 @@ const Diary = () => {
             e.preventDefault();
             selectedDiaryId ? handleUpdateDiary() : handleCreateDiary();
           }}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="title" className="block text-white text-sm font-bold mb-2">
               Title:
             </label>
             <input
@@ -99,11 +99,11 @@ const Diary = () => {
               id="title"
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="content" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="content" className="block text-white text-sm font-bold mb-2">
               Buddy, How was your day?
             </label>
             <textarea
