@@ -7,6 +7,13 @@ const App = () => {
       <div className="h-32">
 
       <InlineWidget url="https://calendly.com/anuragshirsekar7" className=''/>
+      
+      </div>
+      
+      <div className="h-32">
+
+      <InlineWidget url="https://calendly.com/dc12" className=''/>
+      
       </div>
       
     </div>
