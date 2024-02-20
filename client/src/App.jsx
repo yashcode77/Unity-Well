@@ -15,6 +15,10 @@ import UpdatePost from "./pages/UpdatePost";
 import PostPage from "./pages/PostPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Search from "./pages/Search";
+import Diary from "./pages/Diary";
+
+// import DashSidebar from "./components/DashSidebar";
+import GenricSidebar from './components/GenricSidebar'
 import RelaxingActivities from "./pages/RelaxingActivities";
 
 export default function App() {
@@ -22,6 +26,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Header />
+      <GenricSidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/" element={<Landing />} /> */}
@@ -41,6 +46,7 @@ export default function App() {
 
         <Route path="/projects" element={<Projects />} />
         <Route path="/post/:postSlug" element={<PostPage />} />
+        <Route path="/diary" element={<Diary />} />
       </Routes>
       <Footer />
     </BrowserRouter>

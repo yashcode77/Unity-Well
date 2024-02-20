@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const diarySchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: 'User', // Replace with the actual User model reference
     required: true,
   },
   title: {
@@ -20,6 +20,6 @@ const diarySchema = new mongoose.Schema({
   },
 });
 
-const Diary = mongoose.model('Diary', diarySchema);
+const DiaryModel = mongoose.model('Diary', diarySchema);
 
-module.exports = Diary;
+export default DiaryModel;
