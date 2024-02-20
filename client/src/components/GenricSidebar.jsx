@@ -109,9 +109,18 @@ export default function GenricSidebar() {
               Activities
             </Sidebar.Item>
           </Link>
+          <Link to="/calendly">
+            <Sidebar.Item
+              active={tab === "calendly"}
+              icon={HiAnnotation}
+              as="div"
+            >
+              Calandly
+            </Sidebar.Item>
+          </Link>
           <Link to="/diary">
             <Sidebar.Item
-              active={tab === "activities"}
+              active={tab === "diary"}
               icon={HiAnnotation}
               as="div"
             >
