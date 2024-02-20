@@ -25,12 +25,13 @@
 // Relaxing Activities
 import Music from "../assets/images/relaxing-activities/Music.jpg";
 import Reading from "../assets/images/relaxing-activities/Reading.jpg";
-import Videos from "../assets/images/relaxing-activities/Videos.jpg";
-import Memes from "../assets/images/relaxing-activities/Memes.webp";
+// import Videos from "../assets/images/relaxing-activities/Videos.jpg";
+// import Memes from "../assets/images/relaxing-activities/Memes.webp";
 import Exercise from "../assets/images/relaxing-activities/Exercise.webp";
 import Meditation from "../assets/images/relaxing-activities/Meditation.jpg";
 import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
-import Games from "../assets/images/relaxing-activities/Games.webp";
+import { Link } from "react-router-dom";
+// import Games from "../assets/images/relaxing-activities/Games.webp";
 
 // export const sidebarList = [
 //     { name: "Dashboard", link: "/pages/dashboard", icon: <DashboardIcon /> },
@@ -112,29 +113,29 @@ export const relaxingActivitiesList = [
     image: Reading,
     link: "https://www.wattpad.com/",
   },
-  {
-    key: "video",
-    title: "Clips & Videos",
-    content:
-      "Unwind and relax: Treat yourself to some peaceful and calming videos that will soothe your mind and body.",
-    image: Videos,
-    link: "https://www.youtube.com/",
-  },
-  {
-    key: "memes",
-    title: "Memes",
-    content:
-      "Laugh your way to a better mood: Watch some memes and forget your worries for a while.",
-    image: Memes,
-    link: "https://www.instagram.com/explore/",
-  },
+  // {
+  //   key: "video",
+  //   title: "Clips & Videos",
+  //   content:
+  //     "Unwind and relax: Treat yourself to some peaceful and calming videos that will soothe your mind and body.",
+  //   image: Videos,
+  //   link: "https://www.youtube.com/",
+  // },
+  // {
+  //   key: "memes",
+  //   title: "Memes",
+  //   content:
+  //     "Laugh your way to a better mood: Watch some memes and forget your worries for a while.",
+  //   image: Memes,
+  //   link: "https://www.instagram.com/explore/",
+  // },
   {
     key: "exercise",
     title: "Exercise",
     content:
       "Your body will thank you: Take the first step towards a healthier, happier you by prioritizing exercise.",
     image: Exercise,
-    link: "/#/pages/daily-activities",
+    link: "/exercise",
   },
   {
     key: "meditation",
@@ -152,14 +153,14 @@ export const relaxingActivitiesList = [
     image: AudioBooks,
     link: "https://www.audible.in/",
   },
-  {
-    key: "games",
-    title: "Games",
-    content:
-      "Step into the world of endless adventures and exhilarating challenges with our exciting collection of games! Are you ready to unleash your inner gamer?",
-    image: Games,
-    link: "https://www.crazygames.com/",
-  },
+  // {
+  //   key: "games",
+  //   title: "Games",
+  //   content:
+  //     "Step into the world of endless adventures and exhilarating challenges with our exciting collection of games! Are you ready to unleash your inner gamer?",
+  //   image: Games,
+  //   link: "https://www.crazygames.com/",
+  // },
 ];
 
 // export const questionsList = [

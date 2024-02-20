@@ -76,6 +76,8 @@ import Diary from "./pages/Diary";
 import Calendly from "./components/Calendly";
 import GenricSidebar from './components/GenricSidebar';
 import RelaxingActivities from "./pages/RelaxingActivities";
+import Exercise from "./pages/Exercise";
+import Meditation from "./pages/Meditation";
 
 // export default function App() {
 //   return (
@@ -83,34 +85,34 @@ import RelaxingActivities from "./pages/RelaxingActivities";
 //       <ScrollToTop />
 //       <div className="flex flex-col gap-2">
 //         {/* Sidebar on the left */}
-        
+
 //         {/* Main content on the right */}
 //         <div className="flex-1 flex flex-col">
 //           {/* Header takes full screen width */}
 //           <Header />
 //           {/* Main content takes full screen width */}
 //           <div className="flex-1 overflow-y-auto">
-            // <Routes>
-            //   <Route path="/" element={<Home />} />
-            //   {/* <Route path="/" element={<Landing />} /> */}
-            //   <Route path="/about" element={<About />} />
-            //   <Route path="/activities" element={<RelaxingActivities />} />
+// <Routes>
+//   <Route path="/" element={<Home />} />
+//   {/* <Route path="/" element={<Landing />} /> */}
+//   <Route path="/about" element={<About />} />
+//   <Route path="/activities" element={<RelaxingActivities />} />
 
-            //   <Route path="/sign-in" element={<SignIn />} />
-            //   <Route path="/sign-up" element={<SignUp />} />
-            //   <Route path="/search" element={<Search />} />
-            //   <Route element={<PrivateRoute />}>
-            //     <Route path="/dashboard" element={<Dashboard />} />
-            //   </Route>
-            //   <Route element={<OnlyAdminPrivateRoute />}>
-            //     <Route path="/create-post" element={<CreatePost />} />
-            //     <Route path="/update-post/:postId" element={<UpdatePost />} />
-            //   </Route>
-            //   <Route path="/calendly" element={<Calendly />} />
-            //   <Route path="/projects" element={<Projects />} />
-            //   <Route path="/post/:postSlug" element={<PostPage />} />
-            //   <Route path="/diary" element={<Diary />} />
-            // </Routes>
+//   <Route path="/sign-in" element={<SignIn />} />
+//   <Route path="/sign-up" element={<SignUp />} />
+//   <Route path="/search" element={<Search />} />
+//   <Route element={<PrivateRoute />}>
+//     <Route path="/dashboard" element={<Dashboard />} />
+//   </Route>
+//   <Route element={<OnlyAdminPrivateRoute />}>
+//     <Route path="/create-post" element={<CreatePost />} />
+//     <Route path="/update-post/:postId" element={<UpdatePost />} />
+//   </Route>
+//   <Route path="/calendly" element={<Calendly />} />
+//   <Route path="/projects" element={<Projects />} />
+//   <Route path="/post/:postSlug" element={<PostPage />} />
+//   <Route path="/diary" element={<Diary />} />
+// </Routes>
 //           </div>
 //           {/* Footer takes full screen width */}
 //           <Footer />
@@ -128,7 +130,7 @@ export default function App() {
         <div className="flex">
           <div><GenricSidebar /></div>
           <div className="flex justify-center mx-auto">
-          <Routes>
+            <Routes>
               <Route path="/" element={<Home />} />
               {/* <Route path="/" element={<Landing />} /> */}
               <Route path="/about" element={<About />} />
@@ -148,6 +150,8 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/post/:postSlug" element={<PostPage />} />
               <Route path="/diary" element={<Diary />} />
+              <Route path="/exercise" element={<Exercise />} />
+              <Route path="/meditation" element={<Meditation />} />
             </Routes>
           </div>
         </div>
