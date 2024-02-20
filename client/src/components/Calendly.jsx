@@ -3,8 +3,11 @@ import { InlineWidget } from "react-calendly";
 
 const App = () => {
   return (
-    <div className="App flex justify-center w-screen items-">
-      <InlineWidget url="https://calendly.com/anuragshirsekar7" className='w-32'/>
+    <div className="App flex justify-center m-12">
+      <div className="h-32">
+
+      <InlineWidget url="https://calendly.com/anuragshirsekar7" className=''/>
+      </div>
       
     </div>
   );

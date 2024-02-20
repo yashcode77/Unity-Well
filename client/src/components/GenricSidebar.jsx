@@ -41,7 +41,7 @@ export default function GenricSidebar() {
     }
   };
   return (
-    <Sidebar className="w-full md:w-56 mt-5">
+    <Sidebar className="w-56">
       <Sidebar.Items>
         <Sidebar.ItemGroup className="flex flex-col gap-1 ">
           {currentUser && (

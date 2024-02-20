@@ -88,7 +88,7 @@ import { relaxingActivitiesList } from "./Constants";
 const ActivityCard = ({ obj }) => {
   // Destructuring obj directly in the parameter list
   return (
-    <Card className="activityCard whiteBox">
+    <Card className="activityCard whiteBox m-8 ">
       <CardMedia
         component="img"
         alt="green iguana"
