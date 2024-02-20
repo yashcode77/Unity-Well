@@ -47,7 +47,7 @@ export default function GenricSidebar() {
     <Sidebar className="w-56">
       <Sidebar.Items>
         <Sidebar.ItemGroup className="flex flex-col gap-1 ">
-          {currentUser.isAdmin && (
+          {currentUser && (
             <Link to="/dashboard?tab=dash">
               <Sidebar.Item
                 active={tab === "dash" || !tab}
@@ -81,7 +81,7 @@ export default function GenricSidebar() {
               </Sidebar.Item>
             </Link>
           )}
-          {currentUser.isAdmin && (
+          {currentUser && (
             <>
               <Link to="/dashboard?tab=users">
                 <Sidebar.Item
