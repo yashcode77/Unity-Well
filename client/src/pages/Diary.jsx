@@ -79,8 +79,8 @@ const Diary = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-8 flex">
-      <div className="w-1/2 pr-4">
+    <div className="max-w-5xl mx-auto mt-8 flex">
+      <div className=" pr-4">
         <h1 className="text-3xl font-bold mb-4 text-center">My Diary</h1>
         <form
           onSubmit={(e) => {
@@ -122,8 +122,8 @@ const Diary = () => {
           </button>
         </form>
       </div>
-      <div className="w-1/2 pl-4 overflow-y-auto max-h-96">
-        <h2 className="text-2xl font-bold mb-4 text-center">Diary pages</h2>
+      <div className=" pl-4 overflow-y-auto max-h-96">
+        <h2 className="text-3xl font-bold mb-4 text-center">Diary Pages</h2>
         <ul>
           {diaries.map((diary) => (
             <li
