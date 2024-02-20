@@ -3,7 +3,7 @@ export default function Landing() {
     return (
       <>
         {/* <Navbar transparent /> */}
-        <main>
+        {/* <main>
           <div className="relative pt-16 pb-32 flex content-center items-center justify-center"
               style={{
                 minHeight: "75vh"
@@ -574,7 +574,7 @@ export default function Landing() {
               </div>
             </div>
           </section>
-        </main>
+        </main> */}
         {/* <Footer /> */}
       </>
     );
