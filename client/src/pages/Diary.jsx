@@ -1,41 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { Diary } from '../../'; // Assuming diary.model.js is in the same directory
 
-const DiaryPage = () => {
+const Diary = () => {
   const [diaries, setDiaries] = useState([]);
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
   const [selectedDiaryId, setSelectedDiaryId] = useState(null);
 
   useEffect(() => {
-    const fetchDiaries = async () => {
-      // Replace with actual user ID
-      const userId = 'YOUR_USER_ID';
-      const fetchedDiaries = await Diary.find({ userId });
-      setDiaries(fetchedDiaries);
-    };
-
-    fetchDiaries();
+    const storedDiaries = JSON.parse(localStorage.getItem('diaries')) || [];
+    setDiaries(storedDiaries);
   }, []);
 
-  const handleCreateDiary = async () => {
+  useEffect(() => {
+    localStorage.setItem('diaries', JSON.stringify(diaries));
+  }, [diaries]);
+
+  const handleCreateDiary = () => {
     if (!newTitle || !newContent) {
       return alert('Please enter both title and content');
     }
 
-    const newDiary = new Diary({
-      userId: 'YOUR_USER_ID', // Replace with actual user ID
+    const newDiary = {
+      id: Date.now(),
       title: newTitle,
       content: newContent,
-    });
+    };
 
-    await newDiary.save();
     setDiaries([...diaries, newDiary]);
     setNewTitle('');
     setNewContent('');
   };
 
-  const handleUpdateDiary = async () => {
+  const handleUpdateDiary = () => {
     if (!selectedDiaryId) {
       return alert('Please select a diary to update');
     }
@@ -44,30 +40,28 @@ const DiaryPage = () => {
       return alert('Please enter both title and content');
     }
 
-    await Diary.findByIdAndUpdate(selectedDiaryId, {
-      title: newTitle,
-      content: newContent,
-    });
-
     const updatedDiaries = diaries.map((diary) =>
-      diary._id.toString() === selectedDiaryId
+      diary.id === selectedDiaryId
         ? { ...diary, title: newTitle, content: newContent }
         : diary
     );
+
     setDiaries(updatedDiaries);
     setSelectedDiaryId(null);
     setNewTitle('');
     setNewContent('');
   };
 
-  const handleDeleteDiary = async (diaryId) => {
-    await Diary.findByIdAndDelete(diaryId);
-    setDiaries(diaries.filter((diary) => diary._id.toString() !== diaryId));
+  const handleDeleteDiary = (diaryId) => {
+    const updatedDiaries = diaries.filter((diary) => diary.id !== diaryId);
+    setDiaries(updatedDiaries);
   };
 
   const handleSelectDiary = (diaryId) => {
     setSelectedDiaryId(diaryId);
-    const selectedDiary = diaries.find((diary) => diary._id.toString() === diaryId);
+
+    const selectedDiary = diaries.find((diary) => diary.id === diaryId);
+
     setNewTitle(selectedDiary.title);
     setNewContent(selectedDiary.content);
   };
@@ -111,26 +105,30 @@ const DiaryPage = () => {
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
         >
-          {selectedDiaryId ? 'Update' : 'Create'} Diary
+          {selectedDiaryId ? 'Update' : 'Create'}
         </button>
       </form>
       <ul>
         {diaries.map((diary) => (
           <li
-            key={diary._id}
+            key={diary.id}
             className="bg-white shadow-md rounded mb-4 p-4 border-l-4 border-blue-500"
           >
             <h3 className="text-xl font-bold mb-2">{diary.title}</h3>
-            <p className="text-gray-700">{diary.content}</p>
+            <p className="text-gray-700 mb-2">{diary.content}</p>
+            <p className="text-sm text-gray-500">
+              <strong>Date:</strong> {new Date(diary.id).toLocaleDateString()} |{' '}
+              <strong>Time:</strong> {new Date(diary.id).toLocaleTimeString()}
+            </p>
             <div className="mt-2">
               <button
-                onClick={() => handleSelectDiary(diary._id)}
+                onClick={() => handleSelectDiary(diary.id)}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 mr-2 rounded focus:outline-none focus:shadow-outline"
               >
                 Edit
               </button>
               <button
-                onClick={() => handleDeleteDiary(diary._id)}
+                onClick={() => handleDeleteDiary(diary.id)}
                 className="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
               >
                 Delete
@@ -143,4 +141,4 @@ const DiaryPage = () => {
   );
 };
 
-export default DiaryPage;
+export default Diary;
