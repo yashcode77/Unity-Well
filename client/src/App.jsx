@@ -21,6 +21,7 @@ import Calendly from "./components/Calendly"
 // import DashSidebar from "./components/DashSidebar";
 import GenricSidebar from './components/GenricSidebar'
 import RelaxingActivities from "./pages/RelaxingActivities";
+import Exercise from "./pages/Exercise";
 
 export default function App() {
   return (
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/post/:postSlug" element={<PostPage />} />
         <Route path="/diary" element={<Diary />} />
+        <Route path="/exercise" element={<Exercise />} />
       </Routes>
       <Footer />
     </BrowserRouter>
