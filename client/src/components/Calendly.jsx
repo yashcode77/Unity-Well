@@ -6,9 +6,9 @@ const App = () => {
     <div className="App flex justify-center m-12">
       <div className="h-32">
 
-      <InlineWidget url="https://calendly.com/anuragshirsekar7" className=''/>
+        <InlineWidget url="https://calendly.com/anuragshirsekar7" className='' />
       </div>
-      
+
     </div>
   );
 };
