@@ -4,9 +4,9 @@ import { InlineWidget } from "react-calendly";
 const App = () => {
   return (
     <div className="App flex justify-center m-12">
-      <div className="h-32">
+      <div className="flex flex-col items-center justify-center mt-[-6%] h-[94vh]" >
 
-      <InlineWidget url="https://calendly.com/anuragshirsekar7" className=''/>
+      <InlineWidget className = "calendly-block-1 flex flex-col items-center justify-center h-[94vh] w-full" url="https://calendly.com/anuragshirsekar7" />
       </div>
 
     </div>
