@@ -81,6 +81,7 @@ import MeditationTracker from "./pages/daily-activities/MeditationTracker";
 import AnxietyPage from "./pages/Meditation/AnxietyPage";
 import StepMeditation from "./pages/Meditation/StepMeditation";
 import Meditation from "./pages/Meditation";
+
 // export default function App() {
 //   return (
 //     <BrowserRouter>
