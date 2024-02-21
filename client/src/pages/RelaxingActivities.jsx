@@ -89,12 +89,16 @@ const ActivityCard = ({ obj }) => {
   // Destructuring obj directly in the parameter list
   return (
     <Card className="activityCard whiteBox m-8 ">
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="200"
-        image={obj.image}
-      />
+      <div className="h-200 bg-gray-200">
+        <CardMedia
+          component="img"
+          alt="green iguana"
+          height="200"
+          image={obj.image}
+          style={{ objectFit: 'cover', height: '500px', width: '660px' }}
+        />
+      </div>
+
 
       <CardContent>
         <Typography gutterBottom variant="h5" component="div" className="title">

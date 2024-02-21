@@ -22,9 +22,42 @@ export default function Home() {
     fetchPosts();
   }, []);
 
+  const [quote, setQuote] = useState(
+    "Health is a state of complete physical, mental and social well-being and not merely the absence of disease or infirmity",
+    "Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship",
+    "To get rich, never risk your health. For it is the truth that health is the wealth of wealth",
+    "The groundwork for all happiness is good health",
+    "Happiness is the highest form of health",
+    "A healthy lifestyle is the most potent medicine at your disposal",
+    "Early to bed and early to rise, makes a man healthy, wealthy and wise",
+    "Let food be thy medicine and medicine be thy food",
+    "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost",
+  );
+
+  const changeQuote = () => {
+    const randomIndex = Math.floor(Math.random() * initialQuotes.length);
+    setQuote(initialQuotes[randomIndex]);
+  };
+
+  useEffect(() => {
+    // Set an interval to change the quote every hour
+    const intervalId = setInterval(() => {
+      changeQuote();
+    }, 36000); 
+
+    // Clear the interval on component unmount to avoid memory leaks
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div>
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
+        {/* Quote Section */}
+        <section className="bg-gray-800 p-8 rounded-lg shadow-md">
+          <div className="text-center">
+            <p className="text-gray-100 text-lg">{quote}</p>
+          </div>
+        </section>
         {/* New Section */}
         <section className="bg-gray-300 p-8 rounded-lg shadow-md flex items-center justify-between">
           <div className="flex-shrink-0 w-1/2">
@@ -108,6 +141,7 @@ export default function Home() {
               src={AllInOneSolutionImage}
               alt="All-in-One Solution"
               className="rounded-lg w-full max-w-3xl"
+              style={{ maxWidth: "10rem" }}
             />
           </div>
           <p className="mt-4 text-gray-700 text-lg">

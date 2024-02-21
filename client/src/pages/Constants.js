@@ -30,6 +30,7 @@ import Reading from "../assets/images/relaxing-activities/Reading.jpg";
 import Exercise from "../assets/images/relaxing-activities/Exercise.webp";
 import Meditation from "../assets/images/relaxing-activities/Meditation.jpg";
 import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
+import yoga from "../assets/images/yoga.jpg";
 import { Link } from "react-router-dom";
 // import Games from "../assets/images/relaxing-activities/Games.webp";
 
@@ -131,10 +132,10 @@ export const relaxingActivitiesList = [
   // },
   {
     key: "exercise",
-    title: "Exercise",
+    title: "Yoga",
     content:
       "Your body will thank you: Take the first step towards a healthier, happier you by prioritizing exercise.",
-    image: Exercise,
+    image: yoga,
     link: "/exercise",
   },
   {
@@ -143,7 +144,7 @@ export const relaxingActivitiesList = [
     content:
       "Escape into serenity: Find tranquility in the midst of chaos and enjoy the calming effects of meditation.",
     image: Meditation,
-    link: "/#/pages/daily-activities",
+    link: "/meditation",
   },
   {
     key: "audioBooks",
@@ -154,12 +155,12 @@ export const relaxingActivitiesList = [
     link: "https://www.audible.in/",
   },
   // {
-  //   key: "games",
-  //   title: "Games",
+  //   key: "Blog",
+  //   title: "Blog",
   //   content:
-  //     "Step into the world of endless adventures and exhilarating challenges with our exciting collection of games! Are you ready to unleash your inner gamer?",
+  //     "Educating yourself with mental and physical health is important ",
   //   image: Games,
-  //   link: "https://www.crazygames.com/",
+  //   link: "/blog",
   // },
 ];
 
