@@ -30,6 +30,7 @@ import Reading from "../assets/images/relaxing-activities/Reading.jpg";
 import Exercise from "../assets/images/relaxing-activities/Exercise.webp";
 import Meditation from "../assets/images/relaxing-activities/Meditation.jpg";
 import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
+import { Link } from "react-router-dom";
 // import Games from "../assets/images/relaxing-activities/Games.webp";
 
 // export const sidebarList = [
@@ -134,7 +135,7 @@ export const relaxingActivitiesList = [
     content:
       "Your body will thank you: Take the first step towards a healthier, happier you by prioritizing exercise.",
     image: Exercise,
-    link: "/#/pages/daily-activities",
+    link: "/exercise",
   },
   {
     key: "meditation",

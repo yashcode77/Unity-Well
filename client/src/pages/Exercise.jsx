@@ -38,6 +38,18 @@ function Exercise() {
 
     return (
         <div className="container mx-auto h-auto m-12">
+            <div className="flex flex-col items-center justify-center h-auto m-5 ">
+                <div className="max-w-3xl p-8 text-center">
+                    <h1 className="text-4xl font-bold mb-8">Yoga: A Step Towards Wellbeing</h1>
+                    <p className="text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aut eius consectetur ducimus eveniet.
+                        Adipisci numquam cupiditate dolore ad odio at, placeat modi dolores blanditiis eum excepturi nostrum eos
+                        aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem at, et laudantium ad
+                        praesentium consequatur fugiat eius doloremque commodi adipisci placeat sint est incidunt impedit tempora
+                        iusto corporis totam assumenda.
+                    </p>
+                </div>
+            </div>
             <h1 className="text-3xl font-semibold text-center mb-8">Types of YOGA</h1>
             <ExerciseList exercises={exercises} />
         </div>
