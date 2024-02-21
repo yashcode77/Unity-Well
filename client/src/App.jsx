@@ -81,7 +81,7 @@ import MeditationTracker from "./pages/daily-activities/MeditationTracker";
 import AnxietyPage from "./pages/Meditation/AnxietyPage";
 import StepMeditation from "./pages/Meditation/StepMeditation";
 import Meditation from "./pages/Meditation";
-
+import Questionnaire from "./pages/questionnaire/Questions";
 // export default function App() {
 //   return (
 //     <BrowserRouter>
@@ -157,11 +157,13 @@ export default function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/post/:postSlug" element={<PostPage />} />
               <Route path="/diary" element={<Diary />} />
+              <Route path="/exercise" element={<Exercise />} />
               <Route path="daily-activities" element={<DailyActivities />} />
               <Route path="meditation-tracker" element={<MeditationTracker />} />
               <Route path="/meditation" element={<Meditation />} />
               <Route path="/meditation/AnxietyPage" element={<AnxietyPage />} />
               <Route path="/meditation/StepMeditation" element={<StepMeditation />} />
+              <Route path="/questions" element={<Questionnaire />} />
             </Routes>
           </div>
         </div>
