@@ -30,6 +30,7 @@ import Reading from "../assets/images/relaxing-activities/Reading.jpg";
 import Exercise from "../assets/images/relaxing-activities/Exercise.webp";
 import Meditation from "../assets/images/relaxing-activities/Meditation.jpg";
 import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
+import yoga from "../assets/images/yoga.jpg";
 import { Link } from "react-router-dom";
 // import Games from "../assets/images/relaxing-activities/Games.webp";
 
@@ -131,10 +132,10 @@ export const relaxingActivitiesList = [
   // },
   {
     key: "exercise",
-    title: "Exercise",
+    title: "Yoga",
     content:
       "Your body will thank you: Take the first step towards a healthier, happier you by prioritizing exercise.",
-    image: Exercise,
+    image: yoga,
     link: "/exercise",
   },
   {

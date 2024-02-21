@@ -1,6 +1,6 @@
 
 import React from 'react';
-import AnxietyPage from './Meditation/AnxietyPage';
+// import AnxietyPage from './Meditation/AnxietyPage';
 
 function Meditation() {
 
