@@ -78,6 +78,7 @@ import RelaxingActivities from "./pages/RelaxingActivities";
 import Exercise from "./pages/Exercise";
 import DailyActivities from "./pages/daily-activities/DailyActivities";
 import MeditationTracker from "./pages/daily-activities/MeditationTracker";
+import Questions from "./pages/questionnaire/Questions";
 
 // export default function App() {
 //   return (
@@ -156,6 +157,7 @@ export default function App() {
               <Route path="/diary" element={<Diary />} />
               <Route path="daily-activities" element={<DailyActivities />} />
               <Route path="meditation-tracker" element={<MeditationTracker />} />
+              <Route path="/questions" element={<Questions />} />
             </Routes>
           </div>
         </div>
