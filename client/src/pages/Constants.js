@@ -143,7 +143,7 @@ export const relaxingActivitiesList = [
     content:
       "Escape into serenity: Find tranquility in the midst of chaos and enjoy the calming effects of meditation.",
     image: Meditation,
-    link: "/#/pages/daily-activities",
+    link: "/meditation",
   },
   {
     key: "audioBooks",
@@ -154,12 +154,12 @@ export const relaxingActivitiesList = [
     link: "https://www.audible.in/",
   },
   // {
-  //   key: "games",
-  //   title: "Games",
+  //   key: "Blog",
+  //   title: "Blog",
   //   content:
-  //     "Step into the world of endless adventures and exhilarating challenges with our exciting collection of games! Are you ready to unleash your inner gamer?",
+  //     "Educating yourself with mental and physical health is important ",
   //   image: Games,
-  //   link: "https://www.crazygames.com/",
+  //   link: "/blog",
   // },
 ];
 

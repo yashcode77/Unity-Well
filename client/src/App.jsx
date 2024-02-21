@@ -78,7 +78,8 @@ import RelaxingActivities from "./pages/RelaxingActivities";
 import Exercise from "./pages/Exercise";
 import DailyActivities from "./pages/daily-activities/DailyActivities";
 import MeditationTracker from "./pages/daily-activities/MeditationTracker";
-
+import AnxietyPage from "./pages/Meditation/AnxietyPage";
+import StepMeditation from "./pages/Meditation/StepMeditation";
 // export default function App() {
 //   return (
 //     <BrowserRouter>
@@ -156,6 +157,8 @@ export default function App() {
               <Route path="/diary" element={<Diary />} />
               <Route path="daily-activities" element={<DailyActivities />} />
               <Route path="meditation-tracker" element={<MeditationTracker />} />
+              <Route path="/meditation/AnxietyPage" element={<AnxietyPage />} />
+              <Route path="/meditation/StepMeditation" element={<StepMeditation />} />
             </Routes>
           </div>
         </div>
