@@ -8,7 +8,7 @@ const App = () => {
 
       <InlineWidget url="https://calendly.com/anuragshirsekar7" className=''/>
       </div>
-      
+
     </div>
   );
 };

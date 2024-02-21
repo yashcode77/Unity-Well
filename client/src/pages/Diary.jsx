@@ -79,18 +79,18 @@ const Diary = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto mt-8 flex">
-      <div className="w-1/2 pr-4">
+    <div className="max-w-5xl mx-auto mt-8 flex">
+      <div className=" pr-4">
         <h1 className="text-3xl font-bold mb-4 text-center">My Diary</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
             selectedDiaryId ? handleUpdateDiary() : handleCreateDiary();
           }}
-          className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
-            <label htmlFor="title" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="title" className="block text-white text-sm font-bold mb-2">
               Title:
             </label>
             <input
@@ -99,11 +99,11 @@ const Diary = () => {
               id="title"
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>
           <div className="mb-6">
-            <label htmlFor="content" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="content" className="block text-white text-sm font-bold mb-2">
               Buddy, How was your day?
             </label>
             <textarea
@@ -122,8 +122,8 @@ const Diary = () => {
           </button>
         </form>
       </div>
-      <div className="w-1/2 pl-4 overflow-y-auto max-h-96">
-        <h2 className="text-2xl font-bold mb-4 text-center">Diary pages</h2>
+      <div className=" pl-4 overflow-y-auto max-h-96">
+        <h2 className="text-3xl font-bold mb-4 text-center">Diary Pages</h2>
         <ul>
           {diaries.map((diary) => (
             <li

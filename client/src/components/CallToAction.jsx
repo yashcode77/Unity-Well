@@ -22,7 +22,7 @@ export default function CallToAction() {
         </Button>
       </div>
       <div className="p-7 flex-1">
-        <img src="https://wallpapercave.com/wp/wp2793839.jpg" />
+        <img src="https://wallpapercave.com/wp/wp2793839.jpg" alt=""/>
       </div>
     </div>
   );

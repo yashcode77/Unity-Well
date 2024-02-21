@@ -232,15 +232,16 @@ export default function DashProfile() {
           placeholder="password"
           onChange={handleChange}
         />
-        <div>
-          <h1>Enter Your Date of Birth</h1>
+        <div className="text-center flex flex-row justify-between">
+          <h1 className="text-2xl font-bold mb-4 text-gray-500">Enter DOB</h1>
           <input
             type="date"
             id="dob"
             onChange={handleChange}
-            className="text-black h-8"
+            className="block w-100 h-10 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500"
           />
         </div>
+
         <Button
           type="submit"
           gradientDuoTone="purpleToBlue"
