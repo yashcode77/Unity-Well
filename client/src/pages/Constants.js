@@ -51,15 +51,15 @@ import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
 //     // { key: "mood", title: "Mood", icon: <EmojiEmotionsIcon />, color: "#fb8c00" }
 // ];
 
-// export const days = [
-//     { id: 1, name: "Mon" },
-//     { id: 2, name: "Tue" },
-//     { id: 3, name: "Wed" },
-//     { id: 4, name: "Thu" },
-//     { id: 5, name: "Fri" },
-//     { id: 6, name: "Sat" },
-//     { id: 0, name: "Sun" },
-// ];
+export const days = [
+  { id: 1, name: "Mon" },
+  { id: 2, name: "Tue" },
+  { id: 3, name: "Wed" },
+  { id: 4, name: "Thu" },
+  { id: 5, name: "Fri" },
+  { id: 6, name: "Sat" },
+  { id: 0, name: "Sun" },
+];
 
 // export const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
