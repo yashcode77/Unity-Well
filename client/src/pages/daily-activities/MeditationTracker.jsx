@@ -170,10 +170,11 @@ const MeditationTracker = () => {
       direction="row"
       justifyContent="flex-start"
       alignItems="flex-start"
-      spacing={3}
+      spacing={5}
+      margin={8}
     >
       <Grid item xs={12} sm={6}>
-        <Card id="leftCard" className="whiteBox meditationCard">
+        <Card id="leftCard" className="whiteBox meditationCard border-black">
           <CountdownCircleTimer
             key={countKey}
             isPlaying={running}
@@ -203,7 +204,7 @@ const MeditationTracker = () => {
             {formatTime(currentTimeMin)}:{formatTime(currentTimeSec)}
           </div>
 
-          <div onClick={reset} className="endSessionButton">
+          <div onClick={reset} className="endSessionButton cursor-pointer p-1">
             End Session
           </div>
           <audio id="med-audio" loop src={MeditationSound}></audio>
@@ -211,12 +212,17 @@ const MeditationTracker = () => {
       </Grid>
 
       <Grid item xs={12} sm={6}>
-        <Card
-          className="whiteBox historyCard"
-          sx={{ height: historyCardHeight }}
+        <div
+          style={{
+            maxHeight: historyCardHeight,
+            overflowY: "auto",
+            border: "1px solid #ccc",
+          }}
         >
-          <History time={history} tab="meditation" />
-        </Card>
+          <Card className="whiteBox historyCard">
+            <History time={history} tab="meditation" />
+          </Card>
+        </div>
       </Grid>
 
       <Grid item xs={12}>

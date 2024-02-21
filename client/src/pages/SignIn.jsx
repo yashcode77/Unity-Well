@@ -33,7 +33,7 @@ export default function SignIn() {
       if (data.success === false) {
         dispatch(signInFailure(data.message));
       }
-na
+      na;
       if (res.ok) {
         dispatch(signInSuccess(data));
         navigate("/");
@@ -46,16 +46,17 @@ na
     <div className="min-h-screen mt-20">
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-5">
         {/* left */}
-        <div className="flex-1">
+        <div className="flex-1 text-3xl">
           <Link to="/" className="font-bold dark:text-white text-4xl">
             <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-              sample's
+              Unity
             </span>
-            Blog
+            Well
           </Link>
-          <p className="text-sm mt-5">
-            This is a demo project. You can sign in with your email and password
-            or with Google.
+          <p className="text-2xl mt-5">
+            A safe space for all the students who suffers from stress, anxiety,
+            depression in their daily life. UNITYWELL also targets the physical
+            well being of people as it is equally important.
           </p>
         </div>
         {/* right */}

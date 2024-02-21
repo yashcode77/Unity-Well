@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi";
 import { FaWpexplorer } from "react-icons/fa6";
 import { FaTicketAlt, FaPenNib } from "react-icons/fa";
+import { GiCurledLeaf } from "react-icons/gi";
 import { CiPen } from "react-icons/ci";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -109,7 +110,16 @@ export default function GenricSidebar() {
               icon={FaWpexplorer}
               as="div"
             >
-              Explore 
+              Explore
+            </Sidebar.Item>
+          </Link>
+          <Link to="/meditation-tracker">
+            <Sidebar.Item
+              active={tab === "meditation-tracker"}
+              icon={GiCurledLeaf}
+              as="div"
+            >
+              meditation-tracker
             </Sidebar.Item>
           </Link>
           <Link to="/calendly">
@@ -122,11 +132,7 @@ export default function GenricSidebar() {
             </Sidebar.Item>
           </Link>
           <Link to="/diary">
-            <Sidebar.Item
-              active={tab === "diary"}
-              icon={FaPenNib}
-              as="div"
-            >
+            <Sidebar.Item active={tab === "diary"} icon={FaPenNib} as="div">
               Journal
             </Sidebar.Item>
           </Link>

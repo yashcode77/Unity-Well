@@ -26,13 +26,23 @@ export default function Home() {
     <div>
       <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
         {/* New Section */}
-        <section className="bg-gray-800 p-8 rounded-lg shadow-md flex items-center justify-between">
+        <section className="bg-gray-300 p-8 rounded-lg shadow-md flex items-center justify-between">
           <div className="flex-shrink-0 w-1/2">
-            <h2 className="text-2xl font-semibold mb-4">
+            <h2 className="text-2xl font-semibold mb-4 text-black">
               Keep Calm and stay tuned
             </h2>
-            <p className="text-gray-700 text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            <p className="text-black text-lg">
+              In life, the intertwining of fitness and mental health is not just
+              important; it's essential for holistic well-being. Fitness is not
+              merely about physical prowess; it's a cornerstone of overall
+              health, influencing every aspect of our lives. Regular exercise
+              not only strengthens our bodies but also boosts our mood, energy
+              levels, and cognitive function. It's a powerful antidote to
+              stress, anxiety, and depression, releasing endorphins that uplift
+              our spirits and promote a sense of well-being. Moreover,
+              maintaining a healthy weight and strong cardiovascular system
+              reduces the risk of chronic illnesses, enhancing longevity and
+              quality of life.
             </p>
           </div>
           <div className="flex-shrink-0 w-1/2">
@@ -45,8 +55,8 @@ export default function Home() {
         </section>
 
         {/* Mental Health Section */}
-        <section className="bg-gray-800 p-8 rounded-lg shadow-md flex items-center justify-between">
-        <div className="flex-shrink-0 w-1/2">
+        <section className="bg-gray-300 p-8 rounded-lg shadow-md flex items-center justify-between">
+          <div className="flex-shrink-0 w-1/2">
             <img
               src={MentalHealthImage2}
               alt="Mental Health"
@@ -54,18 +64,27 @@ export default function Home() {
             />
           </div>
           <div className="flex-shrink-0 w-1/2">
-            <h2 className="text-2xl font-semibold mb-4 text-left">
+            <h2 className="text-2xl font-semibold mb-4 text-left text-black">
               Mental Health Care for Today's Workforce
             </h2>
-            <p className="mt-4 text-gray-700 text-lg">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+            <p className="mt-4 text-black text-lg">
+              Equally vital is nurturing our mental health. In today's
+              fast-paced world, the pressures of daily life can take a toll on
+              our psychological well-being. Cultivating mental resilience
+              through practices like mindfulness, meditation, and therapy
+              enables us to navigate life's challenges with greater ease and
+              grace. A healthy mind is the foundation of emotional stability,
+              enabling us to manage stress effectively, build fulfilling
+              relationships, and pursue our goals with clarity and
+              determination. Furthermore, prioritizing mental health fosters
+              self-awareness and self-compassion, empowering us to embrace our
+              authentic selves and live with purpose and authenticity.
             </p>
           </div>
-          
         </section>
 
         {/* What We Offer Section */}
-        <section className="bg-gray-800 p-8 rounded-lg shadow-md">
+        <section className="bg-gray-300 p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-center">
             What We Offer
           </h2>
@@ -78,10 +97,9 @@ export default function Home() {
             <Card image={WhatWeOfferImage6} title="Activities" />
           </div>
         </section>
-        
 
         {/* All-in-One Solution Section */}
-        <section className="bg-gray-800 p-8 rounded-lg shadow-md">
+        <section className="bg-gray-300 p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-4 text-center">
             All-in-One Solution
           </h2>
@@ -93,9 +111,14 @@ export default function Home() {
             />
           </div>
           <p className="mt-4 text-gray-700 text-lg">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            Ultimately, the synergy between fitness and mental health is
+            undeniable. By prioritizing both aspects of our well-being, we
+            unlock the full potential of our bodies and minds, enabling us to
+            lead vibrant, fulfilling lives. Whether through a brisk workout
+            session or a moment of quiet reflection, investing in our physical
+            and mental health is not just a choice; it's a commitment to living
+            our best lives, each and every day.
+          </p>
         </section>
       </div>
     </div>
