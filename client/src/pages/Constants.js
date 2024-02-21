@@ -31,6 +31,7 @@ import Exercise from "../assets/images/relaxing-activities/Exercise.webp";
 import Meditation from "../assets/images/relaxing-activities/Meditation.jpg";
 import AudioBooks from "../assets/images/relaxing-activities/AudioBooks.jpg";
 import yoga from "../assets/images/yoga.jpg";
+import blog from "../assets/images/blog.jpg";
 import { Link } from "react-router-dom";
 // import Games from "../assets/images/relaxing-activities/Games.webp";
 
@@ -98,22 +99,7 @@ export const days = [
 // ];
 
 export const relaxingActivitiesList = [
-  {
-    key: "music",
-    title: "Music",
-    content:
-      "Let the music move you: Feel the rhythm and experience the transformative power of music.",
-    image: Music,
-    link: "https://open.spotify.com/",
-  },
-  {
-    key: "reading",
-    title: "Reading",
-    content:
-      "Take a break from reality and Let your imagination soar : Dive into a good read and unlock a world of possibilities.",
-    image: Reading,
-    link: "https://www.wattpad.com/",
-  },
+
   // {
   //   key: "video",
   //   title: "Clips & Videos",
@@ -147,6 +133,22 @@ export const relaxingActivitiesList = [
     link: "/meditation",
   },
   {
+    key: "music",
+    title: "Music",
+    content:
+      "Let the music move you: Feel the rhythm and experience the transformative power of music.",
+    image: Music,
+    link: "https://open.spotify.com/",
+  },
+  {
+    key: "reading",
+    title: "Reading",
+    content:
+      "Take a break from reality and Let your imagination soar : Dive into a good read and unlock a world of possibilities.",
+    image: Reading,
+    link: "https://www.wattpad.com/",
+  },
+  {
     key: "audioBooks",
     title: "Audio Books",
     content:
@@ -154,14 +156,14 @@ export const relaxingActivitiesList = [
     image: AudioBooks,
     link: "https://www.audible.in/",
   },
-  // {
-  //   key: "Blog",
-  //   title: "Blog",
-  //   content:
-  //     "Educating yourself with mental and physical health is important ",
-  //   image: Games,
-  //   link: "/blog",
-  // },
+  {
+    key: "Blog",
+    title: "Blog",
+    content:
+      "Educating yourself with mental and physical health is important ",
+    image: blog,
+    link: "https://psychcentral.com/blog",
+  },
 ];
 
 // export const questionsList = [

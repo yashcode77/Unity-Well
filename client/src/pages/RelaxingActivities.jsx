@@ -88,7 +88,7 @@ import { relaxingActivitiesList } from "./Constants";
 const ActivityCard = ({ obj }) => {
   // Destructuring obj directly in the parameter list
   return (
-    <Card className="activityCard whiteBox m-8 ">
+    <Card className="activityCard whiteBox m-8  shadow-lg rounded-lg transition duration-300 transform hover:scale-105">
       <div className="h-200 bg-gray-200">
         <CardMedia
           component="img"
@@ -110,7 +110,7 @@ const ActivityCard = ({ obj }) => {
       </CardContent>
 
       <CardActions>
-        <Button size="small">
+        <Button size="small" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full">
           <Link
             href={obj.link}
             underline="none"
@@ -120,6 +120,7 @@ const ActivityCard = ({ obj }) => {
                 : "_blank"
             }
             rel="noopener"
+            className="block w-full h-full"
           >
             Discover
           </Link>
