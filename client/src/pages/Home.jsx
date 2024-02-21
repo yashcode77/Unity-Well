@@ -31,8 +31,8 @@ export default function Home() {
             <h2 className="text-2xl font-semibold mb-4">
               Keep Calm and stay tuned
             </h2>
-            <p className="text-gray-700 text-lg">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+            <p className="text-gray-500 text-lg">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
             </p>
           </div>
           <div className="flex-shrink-0 w-1/2">
@@ -46,7 +46,7 @@ export default function Home() {
 
         {/* Mental Health Section */}
         <section className="bg-gray-800 p-8 rounded-lg shadow-md flex items-center justify-between">
-        <div className="flex-shrink-0 w-1/2">
+          <div className="flex-shrink-0 w-1/2">
             <img
               src={MentalHealthImage2}
               alt="Mental Health"
@@ -57,11 +57,11 @@ export default function Home() {
             <h2 className="text-2xl font-semibold mb-4 text-left">
               Mental Health Care for Today's Workforce
             </h2>
-            <p className="mt-4 text-gray-700 text-lg">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
+            <p className="mt-4 text-gray-500 text-lg">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web
             </p>
           </div>
-          
+
         </section>
 
         {/* What We Offer Section */}
@@ -78,7 +78,7 @@ export default function Home() {
             <Card image={WhatWeOfferImage6} title="Activities" />
           </div>
         </section>
-        
+
 
         {/* All-in-One Solution Section */}
         <section className="bg-gray-800 p-8 rounded-lg shadow-md">
@@ -90,12 +90,12 @@ export default function Home() {
               src={AllInOneSolutionImage}
               alt="All-in-One Solution"
               className="rounded-lg w-full max-w-3xl"
+              style={{ maxWidth: "10rem" }}
             />
           </div>
-          <p className="mt-4 text-gray-700 text-lg">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+          <p className="mt-4 text-gray-500 text-lg">
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
         </section>
       </div>
     </div>
