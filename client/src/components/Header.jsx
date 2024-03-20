@@ -133,7 +133,7 @@ export default function Header() {
                     </Dropdown.Item>
                     {/* Add the link to the third game */}
                     <Dropdown.Item>
-                        <Link to="/emotion-explorer">Third Game</Link>
+                        <Link to="/emotion-explorer">Emotion Explorer</Link>
                     </Dropdown.Item>
                 </Dropdown>
             </Navbar.Collapse>
