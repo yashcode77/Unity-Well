@@ -100,7 +100,7 @@ const Diary = () => {
               id="title"
               value={newTitle}
               onChange={(e) => setNewTitle(e.target.value)}
-              className="input-field"
+              className="input-field title-input"
             />
           </div>
           <div className="input-group">
@@ -145,13 +145,13 @@ const Diary = () => {
               <div className="btn-group">
                 <button
                   onClick={() => handleReadDiary(diary.content)}
-                  className="btn-secondary"
+                  className="btn-secondary read"
                 >
                   Read
                 </button>
                 <button
                   onClick={() => handleSelectDiary(diary.id)}
-                  className="btn-secondary"
+                  className="btn-secondary edit"
                 >
                   Edit
                 </button>

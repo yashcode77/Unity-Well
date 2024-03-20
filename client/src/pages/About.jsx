@@ -2,6 +2,9 @@ import React from 'react';
 import { FaAward } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import johnImage from "/src/assets/images/user.png"; // Importing images
+import janeImage from "/src/assets/images/user.png";
+import alexImage from "/src/assets/images/user.png";
 
 // Card component for team members
 const TeamMemberCard = ({ name, role, image }) => (
@@ -29,9 +32,9 @@ const InfoCard = ({ title, content }) => (
 export default function AboutUs() {
   // Define your team members' data here
   const teamMembers = [
-    { name: "John Doe", role: "Founder/CEO", image: "/src/assets/images/user.png" },
-    { name: "Jane Smith", role: "Lead Developer", image: "/src/assets/images/user.png" },
-    { name: "Alex Johnson", role: "Marketing Manager", image: "/src/assets/images/user.png" },
+    { name: "John Doe", role: "Founder/CEO", image: johnImage },
+    { name: "Jane Smith", role: "Lead Developer", image: janeImage },
+    { name: "Alex Johnson", role: "Marketing Manager", image: alexImage },
     // Add more team members as needed
   ];
 
