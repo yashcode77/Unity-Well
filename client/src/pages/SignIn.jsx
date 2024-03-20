@@ -55,7 +55,7 @@ export default function SignIn() {
           </Link>
           <p className="text-2xl mt-5">
             A safe space for all the students who suffers from stress, anxiety,
-            depression in their daily life. UNITYWELL also targets the physical
+            depression in their daily life. UnityWell also targets the physical
             well being of people as it is equally important.
           </p>
         </div>

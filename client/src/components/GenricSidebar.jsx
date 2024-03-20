@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi";
 import { FaWpexplorer } from "react-icons/fa6";
 import { FaTicketAlt, FaPenNib } from "react-icons/fa";
+import { HiUserGroup } from "react-icons/hi2";
 import { GiCurledLeaf } from "react-icons/gi";
 import { CiPen } from "react-icons/ci";
 import { useEffect, useState } from "react";
@@ -48,7 +49,7 @@ export default function GenricSidebar() {
     <Sidebar className="w-56">
       <Sidebar.Items>
         <Sidebar.ItemGroup className="flex flex-col gap-1 ">
-          {currentUser && (
+          {/* {currentUser && (
             <Link to="/dashboard?tab=dash">
               <Sidebar.Item
                 active={tab === "dash" || !tab}
@@ -57,8 +58,8 @@ export default function GenricSidebar() {
               >
                 Dashboard
               </Sidebar.Item>
-            </Link>
-          )}
+            </Link> */}
+          {/* )} */}
           <Link to="/dashboard?tab=profile">
             <Sidebar.Item
               active={tab === "profile"}
@@ -84,7 +85,7 @@ export default function GenricSidebar() {
           )}
           {currentUser && (
             <>
-              <Link to="/dashboard?tab=users">
+              {/* <Link to="/dashboard?tab=users">
                 <Sidebar.Item
                   active={tab === "users"}
                   icon={HiOutlineUserGroup}
@@ -92,8 +93,8 @@ export default function GenricSidebar() {
                 >
                   Users
                 </Sidebar.Item>
-              </Link>
-              <Link to="/dashboard?tab=comments">
+              </Link> */}
+              {/* <Link to="/dashboard?tab=comments">
                 <Sidebar.Item
                   active={tab === "comments"}
                   icon={HiAnnotation}
@@ -101,7 +102,7 @@ export default function GenricSidebar() {
                 >
                   Comments
                 </Sidebar.Item>
-              </Link>
+              </Link> */}
             </>
           )}
           <Link to="/activities">
@@ -120,6 +121,15 @@ export default function GenricSidebar() {
               as="div"
             >
               meditation-tracker
+            </Sidebar.Item>
+          </Link>
+          <Link to="/community">
+            <Sidebar.Item
+              active={tab === "Community"}
+              icon={HiUserGroup}
+              as="div"
+            >
+              Community
             </Sidebar.Item>
           </Link>
           <Link to="/calendly">

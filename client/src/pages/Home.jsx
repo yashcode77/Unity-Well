@@ -31,7 +31,7 @@ export default function Home() {
     "A healthy lifestyle is the most potent medicine at your disposal",
     "Early to bed and early to rise, makes a man healthy, wealthy and wise",
     "Let food be thy medicine and medicine be thy food",
-    "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost",
+    "When wealth is lost, nothing is lost; when health is lost, something is lost; when character is lost, all is lost"
   );
 
   const changeQuote = () => {
@@ -43,7 +43,7 @@ export default function Home() {
     // Set an interval to change the quote every hour
     const intervalId = setInterval(() => {
       changeQuote();
-    }, 36000); 
+    }, 36000);
 
     // Clear the interval on component unmount to avoid memory leaks
     return () => clearInterval(intervalId);
@@ -118,7 +118,7 @@ export default function Home() {
 
         {/* What We Offer Section */}
         <section className="bg-gray-300 p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-black">
             What We Offer
           </h2>
           <div className="grid grid-cols-2 gap-4">
@@ -133,7 +133,7 @@ export default function Home() {
 
         {/* All-in-One Solution Section */}
         <section className="bg-gray-300 p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-black">
             All-in-One Solution
           </h2>
           <div className="flex justify-center">
