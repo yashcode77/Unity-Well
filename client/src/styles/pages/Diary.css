@@ -1,4 +1,6 @@
 /* Diary Container */
+
+
 .diary-container {
     width: 100%;
     height: 100vh;
@@ -8,6 +10,7 @@
     background-color: #10172A; /* Dark blue background color */
     font-family: Arial, sans-serif; /* Font family */
     color: #eee; /* Light text color */
+    margin-left: 100px;
   }
   
   /* Diary Form */
@@ -45,12 +48,13 @@
     border-radius: 4px;
     background-color: #192A49; /* Darker input background color */
     color: #eee; /* Light text color */
+    font-family: 'Comic Sans MS', cursive;
   }
   
   .btn-primary {
     width: 100%;
     padding: 10px;
-    background-color: #1D72E7; /* Blue button color */
+    background-color: #1D72E7; /* Dark blue button color */
     color: white;
     border: none;
     border-radius: 4px;
@@ -117,7 +121,7 @@
     background-color: #D62828; /* Darker red color */
   }
   
-  .btn-secondary:hover,
+
   .btn-danger:hover {
     background-color: #B01919; /* Darker red color on hover */
   }
@@ -143,12 +147,15 @@
     overflow-y: auto;
     color: #eee; /* Light text color */
     text-align: justify;
+    font-family: 'Comic Sans MS', cursive;
+    width: 500px;
   }
   
   .modal-title {
     text-align: center;
     margin-bottom: 15px;
     font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
   }
   
   .modal-close {
@@ -160,3 +167,15 @@
     color: #eee; /* Light text color */
   }
   
+  .edit{
+    background-color:cornflowerblue;
+  }
+
+  .read{
+    background-color:dodgerblue;
+  }
+
+  .title-input{
+    border-radius: 5px;
+    color: black;
+  }

@@ -2,6 +2,10 @@ import React from 'react';
 import { FaAward } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import johnImage from "/src/assets/images/user.png"; // Importing images
+import janeImage from "/src/assets/images/user.png";
+import alexImage from "/src/assets/images/user.png";
+import missionImage from "/src/assets/images/mission.jpg";
 
 // Card component for team members
 const TeamMemberCard = ({ name, role, image }) => (
@@ -19,21 +23,49 @@ const TeamMemberCard = ({ name, role, image }) => (
 );
 
 // Card component for vision, mission, and values
-const InfoCard = ({ title, content }) => (
-  <div className="bg-gray-800 rounded-lg p-6 mb-8">
-    <h2 className="text-3xl font-bold mb-4">{title}</h2>
-    <p>{content}</p>
+const InfoCard = ({ title, content, image }) => (
+  <div className="bg-gray-800 rounded-lg p-6 mb-8 flex flex-row items-center">
+    <img src={image} alt={title} className="w-24 h-24 rounded-full mr-6" />
+    <div>
+      <h2 className="text-3xl font-bold mb-4">{title}</h2>
+      <p>{content}</p>
+    </div>
   </div>
 );
 
 export default function AboutUs() {
   // Define your team members' data here
   const teamMembers = [
-    { name: "John Doe", role: "Founder/CEO", image: "/src/assets/images/user.png" },
-    { name: "Jane Smith", role: "Lead Developer", image: "/src/assets/images/user.png" },
-    { name: "Alex Johnson", role: "Marketing Manager", image: "/src/assets/images/user.png" },
+    { name: "John Doe", role: "Founder/CEO", image: johnImage },
+    { name: "Jane Smith", role: "Lead Developer", image: janeImage },
+    { name: "Alex Johnson", role: "Marketing Manager", image: alexImage },
     // Add more team members as needed
   ];
+
+  // Define your vision, mission, and values data here
+  const vision = {
+    title: "Our Vision",
+    content: "Our vision is to create a world where everyone has access to quality mental health care.",
+    image: missionImage // Replace with actual image path
+  };
+
+  const mission = {
+    title: "Our Mission",
+    content: "Our mission is to provide inclusive, personalized, and accessible mental health solutions.",
+    image: missionImage // Replace with actual image path
+  };
+
+  const values = {
+    title: "Our Values",
+    content: (
+      <>
+        <p><strong>Inclusivity:</strong> We are committed to providing mental health solutions that are inclusive and accessible to all individuals, regardless of background or circumstance.</p>
+        <p><strong>Empowerment:</strong> We believe in empowering individuals to take control of their mental health journey through personalized support and resources.</p>
+        <p><strong>Innovation:</strong> We continuously innovate and adapt to meet the evolving needs of our community, leveraging technology and evidence-based practices.</p>
+      </>
+    ),
+    image: missionImage // Replace with actual image path
+  };
 
   // AnimatedSection component to trigger animations when section is in view
   const AnimatedSection = ({ children }) => {
@@ -57,24 +89,9 @@ export default function AboutUs() {
   return (
     <section className="about-us py-12 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
-        <InfoCard
-          title="Our Story"
-          content="UnityWell was founded in [year] with a vision to revolutionize the approach to mental health and well-being. Our journey began with the realization that traditional methods of mental health care were often inaccessible and insufficient for addressing the diverse needs of individuals."
-        />
-        <InfoCard
-          title="Our Mission"
-          content="At UnityWell, our mission is to provide inclusive, personalized, and accessible mental health solutions that empower individuals to lead healthier and happier lives. We strive to break down barriers to mental health care and promote holistic well-being for all."
-        />
-        <InfoCard
-          title="Our Values"
-          content={
-            <>
-              <p><strong>Inclusivity:</strong> We are committed to providing mental health solutions that are inclusive and accessible to all individuals, regardless of background or circumstance.</p>
-              <p><strong>Empowerment:</strong> We believe in empowering individuals to take control of their mental health journey through personalized support and resources.</p>
-              <p><strong>Innovation:</strong> We continuously innovate and adapt to meet the evolving needs of our community, leveraging technology and evidence-based practices.</p>
-            </>
-          }
-        />
+        <InfoCard {...vision} />
+        <InfoCard {...mission} />
+        <InfoCard {...values} />
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-4">Our Team</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
