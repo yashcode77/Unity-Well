@@ -83,6 +83,12 @@ import StepMeditation from "./pages/Meditation/StepMeditation";
 import Meditation from "./pages/Meditation";
 import Questionnaire from "./pages/questionnaire/Questions";
 import Community from "./pages/Community";
+
+import EmotionExplorer from "./gameComponents/games/EmotionExplorer";
+import ZenPuzzleChallenge from "./gameComponents/games/ZenPuzzleChallenge";
+import GratitudeGarden from "./gameComponents/games/GratitudeGarden";
+import UnderstandYourself from "./gameComponents/games/UnderstandYourself";
+
 // export default function App() {
 //   return (
 //     <BrowserRouter>
@@ -172,6 +178,12 @@ export default function App() {
               />
               <Route path="/questions" element={<Questionnaire />} />
               <Route path="/community" element={<Community />} />
+
+
+              <Route path="/emotion-explorer" element={<EmotionExplorer />} />
+              <Route path="/zen" element={<ZenPuzzleChallenge />} />
+              <Route path="/gratitude" element={<GratitudeGarden />} />
+              <Route path="/understandyourself" element={<UnderstandYourself />} />
             </Routes>
           </div>
         </div>
