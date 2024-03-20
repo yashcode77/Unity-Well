@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
+    "@chatscope/chat-ui-kit-styles": "^1.4.0",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
@@ -42,7 +44,10 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^3.1.0",
     "sass": "^1.71.0",
-    "use-sound": "^4.0.1"
+    "use-sound": "^4.0.1",
+    "@google/generative-ai": "^0.1.2",
+    "@uiw/react-md-editor": "^4.0.1",
+    "dayjs": "^1.11.10"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.4",

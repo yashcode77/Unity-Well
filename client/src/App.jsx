@@ -73,6 +73,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Search from "./pages/Search";
 import Diary from "./pages/Diary";
 import Calendly from "./components/Calendly";
+import ChatWindow from "./components/ChatWindow";
 import GenricSidebar from "./components/GenricSidebar";
 import RelaxingActivities from "./pages/RelaxingActivities";
 import Exercise from "./pages/Exercise";
@@ -155,6 +156,7 @@ export default function App() {
                 <Route path="/update-post/:postId" element={<UpdatePost />} />
               </Route>
               <Route path="/calendly" element={<Calendly />} />
+              <Route path="/chatbot" element={<ChatWindow />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/post/:postSlug" element={<PostPage />} />
               <Route path="/diary" element={<Diary />} />
@@ -173,6 +175,12 @@ export default function App() {
               <Route path="/questions" element={<Questionnaire />} />
               <Route path="/community" element={<Community />} />
             </Routes>
+            {/* <FaCommentAlt
+              style={chatIconStyle}
+              onClick={toggleChatbot} // Toggle chatbot visibility on icon click
+            />
+            {showChatbot && <ChatWindow />}  */}
+            {/* Render chatbot component if showChatbot is true */}
           </div>
         </div>
         <div>

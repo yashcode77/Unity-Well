@@ -9,6 +9,7 @@ import {
 } from "react-icons/hi";
 import { FaWpexplorer } from "react-icons/fa6";
 import { FaTicketAlt, FaPenNib } from "react-icons/fa";
+import { SiChatbot } from "react-icons/si";
 import { HiUserGroup } from "react-icons/hi2";
 import { GiCurledLeaf } from "react-icons/gi";
 import { CiPen } from "react-icons/ci";
@@ -144,6 +145,11 @@ export default function GenricSidebar() {
           <Link to="/diary">
             <Sidebar.Item active={tab === "diary"} icon={FaPenNib} as="div">
               Journal
+            </Sidebar.Item>
+          </Link>
+          <Link to="/chatbot">
+            <Sidebar.Item active={tab === "chatbot"} icon={SiChatbot} as="div">
+              Chatbot
             </Sidebar.Item>
           </Link>
           <Sidebar.Item
