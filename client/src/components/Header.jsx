@@ -7,6 +7,7 @@ import { toggleTheme } from '../redux/theme/themeSlice';
 import { signoutSuccess } from '../redux/user/userSlice';
 import { useEffect } from 'react';
 import { Navbar, TextInput, Button, Avatar, Dropdown } from 'flowbite-react';
+import { FaTicketAlt, FaPenNib } from "react-icons/fa";
 
 // Import the games components
 import ZenPuzzleChallenge from '../gameComponents/games/ZenPuzzleChallenge';
@@ -54,17 +55,16 @@ export default function Header() {
     };
 
     return (
-        <Navbar className="border-b-2">
+        <Navbar className="border-b-2 ">
             <Link
                 to="/"
                 className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
             >
                 <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-                    Unity
+                    Unity Well
                 </span>
-                Well
             </Link>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
                 <TextInput
                     type="text"
                     placeholder="Search..."
@@ -73,10 +73,10 @@ export default function Header() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-            </form>
-            <Button className="w-12 h-10 lg:hidden" color="gray" pill>
+            </form> */}
+            {/* <Button className="w-12 h-10 lg:hidden" color="gray" pill>
                 <AiOutlineSearch />
-            </Button>
+            </Button> */}
             <div className="flex gap-2 md:order-2">
                 <Button
                     className="w-12 h-10 hidden sm:inline"
@@ -113,27 +113,48 @@ export default function Header() {
             </div>
             <Navbar.Collapse>
                 <Navbar.Link active={path === '/'} as={'div'}>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className='text-lg'>Home</Link>
                 </Navbar.Link>
                 <Navbar.Link active={path === '/questions'} as={'div'}>
-                    <Link to="/questions">Understand Yourself</Link>
+                    <Link to="/questions" className='text-lg' >Introspect</Link>
                 </Navbar.Link>
-                <Navbar.Link active={path === '/about'} as={'div'}>
-                    <Link to="/about">About</Link>
+                
+                <Navbar.Link active={path === '/community'} as={'div'}>
+                    <Link to="/community" className='text-lg'>Community</Link>
                 </Navbar.Link>
-                <Navbar.Link active={path === '/projects'} as={'div'}>
-                    <Link to="/projects">Support Us</Link>
+                <Navbar.Link active={path === '/calendly'} as={'div'}>
+                    <Link to="/calendly" className='text-lg'>Book Session</Link>
                 </Navbar.Link>
-                <Dropdown arrowIcon={true} inline label="Games">
+                <Navbar.Link active={path === '/chatbot'} as={'div'}>
+                    <Link to="/chatbot" className='text-lg'>Chatbot</Link>
+                </Navbar.Link>
+                <Dropdown arrowIcon={true} className='text-lg' inline label={<span className="text-lg">Games</span>}>
                     <Dropdown.Item>
-                        <Link to="/zen">Zen Puzzle Challenge</Link>
+                        <Link to="/zen" >Zen Puzzle Challenge</Link>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                        <Link to="/gratitude">Gratitude Garden</Link>
+                        <Link to="/gratitude" >Gratitude Garden</Link>
                     </Dropdown.Item>
                     {/* Add the link to the third game */}
                     <Dropdown.Item>
-                        <Link to="/emotion-explorer">Emotion Explorer</Link>
+                        <Link to="/emotion-explorer" >Emotion Explorer</Link>
+                    </Dropdown.Item>
+                </Dropdown>
+                <Dropdown arrowIcon={true} inline label={<span className="text-lg">More</span>}>
+                    <Dropdown.Item>
+                        <Link to="/activities">Explore Ativities</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        <Link to="/meditation-tracker">Meditate</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        <Link to="/diary">Journal</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        <Link to="/about">About Us</Link>
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                        <Link to="/projects">Support Us</Link>
                     </Dropdown.Item>
                 </Dropdown>
             </Navbar.Collapse>

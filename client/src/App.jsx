@@ -141,9 +141,9 @@ export default function App() {
           <Header></Header>
         </div>
         <div className="flex">
-          <div>
+          {/* <div>
             <GenricSidebar />
-          </div>
+          </div> */}
           <div className="flex justify-center w-full">
             <Routes>
               <Route path="/" element={<Home />} />
