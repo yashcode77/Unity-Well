@@ -1,0 +1,73 @@
+/* GratitudeGarden.css */
+.gratitude-garden {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dark-theme .plant-input input,
+.dark-theme .plant-input button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dark-theme .plant-input input::placeholder {
+    color: #ccc;
+}
+
+.dark-theme .plant-input button:hover {
+    cursor: pointer;
+    background-color: #444;
+}
+
+.dark-theme .plant-list {
+    margin-top: 20px;
+}
+
+.dark-theme .plant {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-theme .plant.watered {
+    background-color: #006aa7;
+}
+
+.dark-theme .plant button {
+    background-color: #006aa7;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-theme .plant button:hover {
+    background-color: #006aa7;
+}
+
+.tree-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.leaves-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+}
