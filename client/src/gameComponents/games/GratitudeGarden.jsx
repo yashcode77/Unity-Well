@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import './GratitudeGarden.css';
 import { FaTree, FaLeaf } from 'react-icons/fa'; // Import tree and leaf icons
+import {
+    TwitterShareButton,
+    WhatsappShareButton,
+    TwitterIcon,
+    WhatsappIcon
+  } from "react-share";
 
 function GratitudeGarden() {
     const [plants, setPlants] = useState([]); // State to store the plants in the garden
@@ -41,6 +47,20 @@ function GratitudeGarden() {
                     onChange={(e) => setGratitude(e.target.value)}
                 />
                 <button onClick={addPlant}>Plant</button>
+                <TwitterShareButton
+                    title={"view my achievement from UnityWell"} 
+                    url={"www.unitywell.com/achievements/1243298"}
+                >
+                    <TwitterIcon size={32} round={true} />
+                </TwitterShareButton>
+                <WhatsappShareButton
+                    title={"view my achievement from UnityWell"} 
+                    url={"www.unitywell.com/achievements/1243298"}
+                    separator='::'
+                    // url={"www.unitywell.com/achievements/1243298"}
+                >
+                    <WhatsappIcon size={32} round={true} />
+                </WhatsappShareButton>
             </div>
             <div className="plant-list">
                 {plants.map(plant => (
@@ -57,6 +77,7 @@ function GratitudeGarden() {
             <div className="leaves-icon">
                 <FaLeaf size={30} color="green" />
             </div>
+            
         </div>
     );
 }

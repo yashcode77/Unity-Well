@@ -144,7 +144,7 @@ export default function App() {
           <div>
             <GenricSidebar />
           </div>
-          <div className="flex justify-center mx-auto">
+          <div className="flex justify-center w-full">
             <Routes>
               <Route path="/" element={<Home />} />
               {/* <Route path="/" element={<Landing />} /> */}
