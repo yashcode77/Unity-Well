@@ -54,18 +54,40 @@ export default function Home() {
 
   return (
     <div>
-      <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
+      <div className="max-w-7xl mx-auto p-3 flex flex-col gap-2 text-white">
         {/* Quote Section */}
-        <QuoteSection quote={quote} />
+        {/* <QuoteSection quote={quote} /> */}
+
+        {/* Mental Health Section */}
+        <AnimatedSection>
+          <div className="p-8 shadow-md flex items-center justify-between mt-28 h-90vh">
+            <div className="flex-shrink-0 w-1/2">
+            <div className="mt-5 flex justify-center items-center text-8xl">
+              <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
+                Unity
+              </span>
+               Well
+          </div>
+            </div>
+            <div className="flex-shrink-0 w-1/2">
+              <h2 className="text-2xl font-semibold mb-4 text-left text-white">
+                Welcome to Unity Well
+              </h2>
+              <p className="mt-4 text-white text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis aspernatur veritatis minus cum at exercitationem ipsam dolorum eaque praesentium? Velit ducimus ullam deleniti atque ut quod adipisci optio, voluptates eius nulla rerum natus distinctio aut molestiae id, voluptas fugiat quibusdam temporibus quis! Accusantium autem veniam minima culpa aliquam, nihil asperiores!
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
 
         {/* New Section */}
         <AnimatedSection>
-          <div className="bg-gray-300 p-8 rounded-lg shadow-md flex items-center justify-between">
+          <div className=" p-8  shadow-md flex items-center justify-between gap-8 my-2 ">
             <div className="flex-shrink-0 w-1/2">
-              <h2 className="text-2xl font-semibold mb-4 text-black">
+              <h2 className="text-2xl font-semibold mb-4 text-white">
                 Keep Calm and stay tuned
               </h2>
-              <p className="text-black text-lg">
+              <p className="text-lg">
                 In life, the intertwining of fitness and mental health is not just
                 important; it's essential for holistic well-being. Fitness is not
                 merely about physical prowess; it's a cornerstone of overall
@@ -91,7 +113,7 @@ export default function Home() {
 
         {/* Mental Health Section */}
         <AnimatedSection>
-          <div className="bg-gray-300 p-8 rounded-lg shadow-md flex items-center justify-between">
+          <div className="p-8 shadow-md flex items-center justify-between">
             <div className="flex-shrink-0 w-1/2">
               <img
                 src={MentalHealthImage2}
@@ -100,10 +122,10 @@ export default function Home() {
               />
             </div>
             <div className="flex-shrink-0 w-1/2">
-              <h2 className="text-2xl font-semibold mb-4 text-left text-black">
+              <h2 className="text-2xl font-semibold mb-4 text-left text-white">
                 Mental Health Care for Today's Workforce
               </h2>
-              <p className="mt-4 text-black text-lg">
+              <p className="mt-4 text-white text-lg">
                 Equally vital is nurturing our mental health. In today's
                 fast-paced world, the pressures of daily life can take a toll on
                 our psychological well-being. Cultivating mental resilience
@@ -122,8 +144,8 @@ export default function Home() {
 
         {/* What We Offer Section */}
         <AnimatedSection>
-          <div className="bg-gray-300 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-center text-black">
+          <div className="p-8 shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-center text-white">
               What We Offer
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -139,8 +161,8 @@ export default function Home() {
 
         {/* All-in-One Solution Section */}
         <AnimatedSection>
-          <div className="bg-gray-300 p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-4 text-center text-black">
+          <div className="p-8 shadow-md">
+            <h2 className="text-2xl font-semibold mb-4 text-center text-white">
               All-in-One Solution
             </h2>
             <div className="flex justify-center">
@@ -151,7 +173,7 @@ export default function Home() {
                 style={{ maxWidth: "10rem" }}
               />
             </div>
-            <p className="mt-4 text-gray-700 text-lg">
+            <p className="mt-4 text-white text-lg">
               Ultimately, the synergy between fitness and mental health is
               undeniable. By prioritizing both aspects of our well-being, we
               unlock the full potential of our bodies and minds, enabling us to
