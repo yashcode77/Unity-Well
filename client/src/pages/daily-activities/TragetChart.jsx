@@ -15,7 +15,7 @@ export default function TragetChart(props) {
 
   return (
     <>
-      <Typography variant="body" gutterBottom className="title">
+      <Typography variant="body" gutterBottom className="title text-white text-lg">
         Weekly Target Chart
       </Typography>
 
@@ -24,7 +24,7 @@ export default function TragetChart(props) {
         direction="row"
         justifyContent="space-around"
         alignItems="center"
-        className="chartContainer"
+        className="chartContainer text-white p-5"
         spacing={"5px"}
       >
         {/* {days.map((obj) => (
@@ -73,7 +73,7 @@ export default function TragetChart(props) {
         </Grid>
         <Grid key={"day-Tuesday"} item xs={1.7} sm={1.5} md={1.3}>
           <CircularProgressbar
-            value={60}
+            value={59}
             //   value={
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }
@@ -87,13 +87,13 @@ export default function TragetChart(props) {
             //   text={`${
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }%`}
-            text={"60"}
+            text={"59"}
           />
           <div className="days-txt">{"Tuesday"}</div>
         </Grid>
         <Grid key={"day-Wednesday"} item xs={1.7} sm={1.5} md={1.3}>
           <CircularProgressbar
-            value={10}
+            value={33}
             //   value={
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }
@@ -107,13 +107,13 @@ export default function TragetChart(props) {
             //   text={`${
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }%`}
-            text={"10"}
+            text={"33"}
           />
           <div className="days-txt">{"Wednesday"}</div>
         </Grid>
         <Grid key={"day-Thursday"} item xs={1.7} sm={1.5} md={1.3}>
           <CircularProgressbar
-            value={0}
+            value={3}
             //   value={
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }
@@ -127,7 +127,7 @@ export default function TragetChart(props) {
             //   text={`${
             //     percentData[obj.id] != undefined ? percentData[obj.id] : 0
             //   }%`}
-            text={"0"}
+            text={"3"}
           />
           <div className="days-txt">{"Thursday"}</div>
         </Grid>
