@@ -9,6 +9,7 @@ import PauseOutlinedIcon from "@mui/icons-material/PauseOutlined";
 import IconButton from "@mui/material/IconButton";
 
 import History from "./History";
+
 import TargetChart from "./TragetChart";
 import MeditationSound from "../../assets/audio/MeditationSound.mp3";
 import { getWeeklyData } from "../../redux/dashboard/DashboardAction";
@@ -174,13 +175,13 @@ const MeditationTracker = () => {
       margin={8}
     >
       <Grid item xs={12} sm={6}>
-        <Card id="leftCard" className="whiteBox meditationCard border-black">
+        <Card id="leftCard" className="og whitebox meditationCard border-black ">
           <CountdownCircleTimer
             key={countKey}
             isPlaying={running}
             duration={60}
-            colors="#d9d9d9"
-            trailColor="#51ab55"
+            colors="#fff"
+            trailColor="#fff"
             strokeWidth="12"
             size={140}
             onComplete={() => {
@@ -200,7 +201,7 @@ const MeditationTracker = () => {
             }
           </CountdownCircleTimer>
 
-          <div className="stopwatch">
+          <div className="stopwatch og">
             {formatTime(currentTimeMin)}:{formatTime(currentTimeSec)}
           </div>
 
@@ -240,71 +241,3 @@ const MeditationTracker = () => {
 
 export default MeditationTracker;
 
-// src/App.js
-// MeditationTracker.jsx
-// MeditationTracker.jsx
-// import React, { useState } from "react";
-// import { CountdownCircleTimer } from "react-countdown-circle-timer";
-// import Chart from "./Chart";
-
-// function MeditationTracker() {
-//   const [isTimerRunning, setIsTimerRunning] = useState(false);
-//   const [meditationDuration, setMeditationDuration] = useState(0);
-//   const [meditationData, setMeditationData] = useState([]);
-
-//   const startTimer = () => {
-//     setIsTimerRunning(true);
-//     // Set duration to a high value to make sure the timer keeps running until stopped
-//     setMeditationDuration(3600); // 3600 seconds = 1 hour (adjust as needed)
-//   };
-
-//   const stopTimer = (event) => {
-//     event.preventDefault(); // Prevent the default form submission or anchor tag navigation
-//     setIsTimerRunning(false);
-//     // Store the elapsed time as the meditation duration
-//     setMeditationData([...meditationData, meditationDuration]);
-//     setMeditationDuration(0);
-//   };
-
-//   const resetTimer = () => {
-//     setIsTimerRunning(false);
-//     setMeditationDuration(0);
-//   };
-
-//   return (
-//     <div className="flex flex-col items-center justify-center h-screen">
-//       <h1 className="text-3xl mb-4">Meditation Tracker</h1>
-//       <CountdownCircleTimer
-//         isPlaying={isTimerRunning}
-//         duration={meditationDuration}
-//         colors={[["#004777", 0.33], ["#F7B801", 0.33], ["#A30000"]]}
-//         onComplete={stopTimer}
-//       >
-//         {({ remainingTime }) => remainingTime}
-//       </CountdownCircleTimer>
-//       <div className="flex mt-4">
-//         <button
-//           onClick={startTimer}
-//           className="mr-4 px-4 py-2 bg-green-500 text-white rounded"
-//         >
-//           Start
-//         </button>
-//         <button
-//           onClick={stopTimer}
-//           className="mr-4 px-4 py-2 bg-red-500 text-white rounded"
-//         >
-//           Stop
-//         </button>
-//         <button
-//           onClick={resetTimer}
-//           className="px-4 py-2 bg-blue-500 text-white rounded"
-//         >
-//           Reset
-//         </button>
-//       </div>
-//       <Chart data={meditationData} />
-//     </div>
-//   );
-// }
-
-// export default MeditationTracker;

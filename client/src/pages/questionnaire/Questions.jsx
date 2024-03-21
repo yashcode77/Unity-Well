@@ -183,7 +183,7 @@ export default function Questionnaire() {
   
 
   return (
-    <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7">
+    <div className="max-w-6xl mx-auto p-3 flex flex-col gap-8 py-7 my-20">
       <div className="bg-gray-800 p-8 rounded-lg shadow-md text-gray-100">
         {showResults ? (
           <div>

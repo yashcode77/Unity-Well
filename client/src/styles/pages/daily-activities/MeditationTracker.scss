@@ -15,11 +15,26 @@
     .endSessionButton {
         border: 2px solid #51ab55;
         color: #51ab55;
+        
     }
 }
 
+.whiteBox {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+ 
 @media screen and (max-width: "400px") {
     .meditationCard {
         padding: 20px 0px;
     }
+}
+
+.og{
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.stopwatch{
+    padding-bottom: 10px;
 }

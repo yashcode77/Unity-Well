@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 import { days } from "../Constants";
-
+import "../../styles/pages/daily-activities/TragetChart.scss"
 export default function TragetChart(props) {
   const { color, data, goal } = props;
 
