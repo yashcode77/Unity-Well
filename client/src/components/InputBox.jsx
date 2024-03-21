@@ -16,7 +16,7 @@ const InputBox = ({ sendMessage, loading }) => {
       <input
         disabled={loading}
         type="text"
-        className="form-control text-black rounded-xl"
+        className="form-control text-black rounded-xl w-96"
         placeholder="Type a message..."
         value={loading ? "Loading..." : input}
         onChange={(e) => setInput(e.target.value)}
