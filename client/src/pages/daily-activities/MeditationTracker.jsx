@@ -175,7 +175,7 @@ const MeditationTracker = () => {
       margin={8}
     >
       <Grid item xs={12} sm={6}>
-        <Card id="leftCard" className="og whitebox meditationCard border-black ">
+        <Card id="leftCard" className="og whitebox meditationCard border-black text-white">
           <CountdownCircleTimer
             key={countKey}
             isPlaying={running}
@@ -220,8 +220,8 @@ const MeditationTracker = () => {
             border: "1px solid #ccc",
           }}
         >
-          <Card className="whiteBox historyCard">
-            <History time={history} tab="meditation" />
+          <Card className="historyCard text-white">
+            <History time={history} tab="meditation" className="text-white"/>
           </Card>
         </div>
       </Grid>

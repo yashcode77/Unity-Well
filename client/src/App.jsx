@@ -168,7 +168,7 @@ export default function App() {
               <Route path="/post/:postSlug" element={<PostPage />} />
               <Route path="/diary" element={<Diary />} />
               <Route path="/exercise" element={<Exercise />} />
-              <Route path="daily-activities" element={<DailyActivities />} />
+              <Route path="/daily-activities" element={<DailyActivities />} />
               <Route
                 path="meditation-tracker"
                 element={<MeditationTracker />}
