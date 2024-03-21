@@ -1,9 +1,6 @@
-
 import React from 'react';
-// import AnxietyPage from './Meditation/AnxietyPage';
 
 function Meditation() {
-
     const meditationSessions = [
         {
             id: 1,
@@ -33,22 +30,20 @@ function Meditation() {
 
     return (
         <div className="container mx-auto px-4 py-8">
-            <h1 className="text-3xl font-semibold mb-6">Meditation Sessions</h1>
-            <div className="grid gap-4 md:grid-cols-2">
+            <h1 className="text-3xl font-semibold mb-6">Meditation Information</h1>
+            <div className="grid gap-20 md:grid-cols-2 w-200">
                 {meditationSessions.map(session => (
-                    <div key={session.id} className='group relative w-full border border-teal-500 hover:border-2 h-[400px] overflow-hidden rounded-lg sm:w-[430px] transition-all'>
-                        <div className="h-[260px] w-full bg-gray-200 flex justify-center items-center">
-                            <div className="h-[260px] w-full flex justify-center items-center">
-                                <img className="object-contain max-h-full max-w-full" src={session.image} alt="session image" />
-                            </div>
+                    <div key={session.id} className="border border-teal-500 hover:border-2 rounded-lg overflow-hidden transition-all">
+                        <div className="h-64  bg-gray-200 flex justify-center items-center">
+                            <img className="object-cover h-full w-full" src={session.image} alt="session image" />
                         </div>
-                        <div className='p-3 flex flex-col gap-2'>
-                            <p className='text-lg font-semibold line-clamp-2'>{session.title}</p>
-                            <span className='italic text-sm'>{session.category}</span>
-                            {/* <p className="text-gray-700">{session.description}</p> */}
+                        <div className="p-4">
+                            <h2 className="text-lg font-semibold mb-2">{session.title}</h2>
+                            <p className="text-sm italic mb-2">{session.category}</p>
+                            <p className="text-gray-700 line-clamp-3">{session.description}</p>
                             <a
                                 href={session.externalLink}
-                                className='z-10 group-hover:bottom-0 absolute bottom-[-200px] left-0 right-0 border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white transition-all duration-300 text-center py-2 rounded-md !rounded-tl-none m-2'
+                                className="block mt-4 text-teal-500 hover:text-teal-600 transition-all duration-300"
                             >
                                 Read more
                             </a>
@@ -58,7 +53,6 @@ function Meditation() {
             </div>
         </div>
     );
-
 }
 
-export default Meditation
+export default Meditation;

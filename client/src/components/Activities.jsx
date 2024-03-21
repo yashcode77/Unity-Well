@@ -5,8 +5,6 @@ function Activities() {
 
     return (
         <div className='flex '>
-
-
         </div>
     )
 
