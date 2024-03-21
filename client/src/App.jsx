@@ -89,6 +89,7 @@ import EmotionExplorer from "./gameComponents/games/EmotionExplorer";
 import ZenPuzzleChallenge from "./gameComponents/games/ZenPuzzleChallenge";
 import GratitudeGarden from "./gameComponents/games/GratitudeGarden";
 import UnderstandYourself from "./gameComponents/games/UnderstandYourself";
+import Test from "./Test"
 
 // export default function App() {
 //   return (
@@ -186,6 +187,7 @@ export default function App() {
               <Route path="/zen" element={<ZenPuzzleChallenge />} />
               <Route path="/gratitude" element={<GratitudeGarden />} />
               <Route path="/understandyourself" element={<UnderstandYourself />} />
+              <Route path="/test" element={< Test />} />
             </Routes>
             {/* <FaCommentAlt
               style={chatIconStyle}
