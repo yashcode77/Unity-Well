@@ -418,7 +418,6 @@ export default function App() {
               <Route path="/zen" element={<ZenPuzzleChallenge />} />
               <Route path="/gratitude" element={<GratitudeGarden />} />
               <Route path="/understandyourself" element={<UnderstandYourself />} />
-              <Route path="/test" element={< Test />} />
             </Routes>
             {/* <FaCommentAlt
               style={chatIconStyle}
