@@ -104,8 +104,8 @@ const ChatWindow = () => {
           </div>
         ))}
       </div>
-      <div className='flex rounded-lg w-10'>
-      <InputBox sendMessage={sendMessage} loading={loading} className='rounded-lg w-1' />
+      <div className='flex justify-center rounded-lg'>
+      <InputBox sendMessage={sendMessage} loading={loading} className='rounded-lg' />
 
       </div>
     </div>

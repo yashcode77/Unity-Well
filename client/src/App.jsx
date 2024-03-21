@@ -89,6 +89,8 @@ import EmotionExplorer from "./gameComponents/games/EmotionExplorer";
 import ZenPuzzleChallenge from "./gameComponents/games/ZenPuzzleChallenge";
 import GratitudeGarden from "./gameComponents/games/GratitudeGarden";
 import UnderstandYourself from "./gameComponents/games/UnderstandYourself";
+import GoogleMap from "./components/GoogleMap";
+import DocDetails from "./components/DocDetails";
 
 // export default function App() {
 //   return (
@@ -132,6 +134,233 @@ import UnderstandYourself from "./gameComponents/games/UnderstandYourself";
 //     </BrowserRouter>
 //   );
 // }
+const agencies = [
+  {
+    name: 'MindCare Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Airoli',
+    latitude: 19.159581,
+    longitude: 72.996645,
+  },
+  {
+    name: 'NutriHealth Diet Clinic',
+    type: 'dietician',
+    location: 'Rabale',
+    latitude: 19.136944,
+    longitude: 73.000000,
+  },
+  {
+    name: 'FitGuru Fitness Center',
+    type: 'fitness trainer',
+    location: 'Ghansoli',
+    latitude: 19.123057,
+    longitude: 72.999011,
+  },
+  {
+    name: 'SereneMind Meditation Center',
+    type: 'meditation center',
+    location: 'Thane',
+    latitude: 19.218330,
+    longitude: 72.978088,
+  },
+  {
+    name: 'MindSpace Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Koparkhairane',
+    latitude: 19.103498,
+    longitude: 73.004520,
+  },
+  {
+    name: 'HealthyEats Diet Clinic',
+    type: 'dietician',
+    location: 'Vashi',
+    latitude: 19.075989,
+    longitude: 72.998398,
+  },
+  {
+    name: 'StrongLife Fitness Center',
+    type: 'fitness trainer',
+    location: 'Juinagar',
+    latitude: 19.056610,
+    longitude: 73.018740,
+  },
+  {
+    name: 'TranquilMind Meditation Center',
+    type: 'meditation center',
+    location: 'Turbhe',
+    latitude: 19.078547,
+    longitude: 73.017614,
+  },
+  {
+    name: 'MentalWellness Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Nerul',
+    latitude: 19.0330,
+    longitude: 73.0181,
+  },
+  {
+    name: 'DietPlus Diet Clinic',
+    type: 'dietician',
+    location: 'Seawoods',
+    latitude: 19.022585,
+    longitude: 73.019767,
+  },
+  {
+    name: 'ActiveFit Fitness Center',
+    type: 'fitness trainer',
+    location: 'Kharghar',
+    latitude: 19.0258,
+    longitude: 73.0588,
+  },
+  {
+    name: 'InnerPeace Meditation Center',
+    type: 'meditation center',
+    location: 'Panvel',
+    latitude: 18.9900,
+    longitude: 73.1175,
+  },
+  {
+    name: 'Tranquility Wellness Center',
+    type: 'psychiatrist',
+    location: 'Belapur',
+    latitude: 19.0192,
+    longitude: 73.0387,
+  },
+  {
+    name: 'Harmony Health Clinic',
+    type: 'dietician',
+    location: 'CBD Belapur',
+    latitude: 19.0183,
+    longitude: 73.0413,
+  },
+  {
+    name: 'Elevate Fitness Studio',
+    type: 'fitness trainer',
+    location: 'Kharghar',
+    latitude: 19.0213,
+    longitude: 73.0640,
+  },
+  {
+    name: 'Serenity Mindfulness Hub',
+    type: 'meditation center',
+    location: 'Kamothe',
+    latitude: 19.0196,
+    longitude: 73.0914,
+  },
+  {
+    name: 'Wellbeing Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Koperkhairane',
+    latitude: 19.1137,
+    longitude: 73.0676,
+  },
+  {
+    name: 'NutriVive Diet Center',
+    type: 'dietician',
+    location: 'Sanpada',
+    latitude: 19.0646,
+    longitude: 73.0092,
+  },
+  {
+    name: 'PulseFit Gym',
+    type: 'fitness trainer',
+    location: 'Navi Mumbai',
+    latitude: 19.0330,
+    longitude: 73.0297,
+  },
+  {
+    name: 'Peaceful Mind Meditation Studio',
+    type: 'meditation center',
+    location: 'Nerul',
+    latitude: 19.0330,
+    longitude: 73.0181,
+  },
+  {
+    name: 'Tranquil Life Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Vashi',
+    latitude: 19.0759,
+    longitude: 73.0007,
+  },
+  {
+    name: 'HealthyLiving Diet Clinic',
+    type: 'dietician',
+    location: 'Kopar Khairane',
+    latitude: 19.1035,
+    longitude: 73.0045,
+  },
+  {
+    name: 'ActiveLife Fitness Hub',
+    type: 'fitness trainer',
+    location: 'Turbhe',
+    latitude: 19.0760,
+    longitude: 73.0176,
+  },
+  {
+    name: 'Tranquility Meditation Center',
+    type: 'meditation center',
+    location: 'Ghansoli',
+    latitude: 19.1231,
+    longitude: 72.9990,
+  },
+  {
+    name: 'MindEase Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Panvel',
+    latitude: 18.9900,
+    longitude: 73.1175,
+  },
+  {
+    name: 'NutriCare Diet Center',
+    type: 'dietician',
+    location: 'Seawoods',
+    latitude: 19.0226,
+    longitude: 73.0198,
+  },
+  {
+    name: 'FitFusion Gym',
+    type: 'fitness trainer',
+    location: 'Navi Mumbai',
+    latitude: 19.0330,
+    longitude: 73.0297,
+  },
+  {
+    name: 'SoulSpace Meditation Studio',
+    type: 'meditation center',
+    location: 'Kamothe',
+    latitude: 19.0196,
+    longitude: 73.0914,
+  },
+  {
+    name: 'MindWell Psychiatry Clinic',
+    type: 'psychiatrist',
+    location: 'Belapur',
+    latitude: 19.0192,
+    longitude: 73.0387,
+  },
+  {
+    name: 'NutriFit Diet Clinic',
+    type: 'dietician',
+    location: 'CBD Belapur',
+    latitude: 19.0183,
+    longitude: 73.0413,
+  },
+  {
+    name: 'FitFusion Fitness Hub',
+    type: 'fitness trainer',
+    location: 'Kharghar',
+    latitude: 19.0213,
+    longitude: 73.0640,
+  },
+  {
+    name: 'MindfulLiving Meditation Center',
+    type: 'meditation center',
+    location: 'Kamothe',
+    latitude: 19.0196,
+    longitude: 73.0914,
+  },
+];
+
 
 export default function App() {
   return (
@@ -162,6 +391,9 @@ export default function App() {
                 <Route path="/update-post/:postId" element={<UpdatePost />} />
               </Route>
               <Route path="/calendly" element={<Calendly />} />
+              <Route path="/calendly/book-session" element={<Calendly />} />
+              <Route path="/calendly/map" element={<GoogleMap agencies={agencies} />} />
+              <Route path="/calendly/view-details" element={<DocDetails />} />
               <Route path="/chatbot" element={<ChatWindow />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/post/:postSlug" element={<PostPage />} />
